@@ -13,6 +13,7 @@ flowchart TD
     OPAL_QUERY --> OPAL_FILES[(Einzel\nDateien\nVerzeichnis)]
     GITHUB[(Github)] --> |Github API| LIA_IDENT(Liascript Identifikation)
     LIA_IDENT --> |Dateisuche| LIA_FILES[(Lia\nDateien)]
+    LIA_REPOS --> LIA_FILES
     LIA_IDENT --> |Reposuche| LIA_REPOS[(Lia\nRepos)]
     LIA_FILES --> DB_HOMOGENISIERUNG(Homogenisierung)
     OPAL_FILES--> DB_HOMOGENISIERUNG 
