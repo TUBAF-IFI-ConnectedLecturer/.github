@@ -14,7 +14,7 @@ Das Vorhaben wird durch den [AK E-Learning](https://bildungsportal.sachsen.de/po
 
 ## Realisierung 
 
-Das Projekt gliedert sich in 3 Subbereiche - Materialidentifikation, Materialbereitstellung, Textanalyse und Clustering. Dabei werden zwei Felder von OER Aktivitäten - Lehrmaterialien aus dem OPAL LMS und der Beschreibungssprache LiaScript - untersucht.
+Das Projekt gliedert sich in 3 Subbereiche - [Materialidentifikation](https://github.com/TUBAF-IFI-ConnectedLecturer/Materialidentifikation), Materialbereitstellung, Textanalyse und Clustering. Dabei werden zwei Felder von OER Aktivitäten - Lehrmaterialien aus dem OPAL LMS und der Beschreibungssprache LiaScript - untersucht.
 
 ```mermaid
 flowchart TD
