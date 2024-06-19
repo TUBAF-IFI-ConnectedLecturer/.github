@@ -39,32 +39,29 @@ flowchart TD
 
     subgraph Materialbereitstellung
     FILE_DOWNLOAD(Datei Download)
-    FILE_DOWNLOAD:::green --> PDFS[(pdf\n Dateien)]
-    FILE_DOWNLOAD --> OFFICE[(.docx,\n.pptx, ...)]
-    PDFS --> TEXTEXTRAKTION_OPAL(Textextraktion)
-    OFFICE --> TEXTEXTRAKTION_OPAL(Textextraktion)
-    TEXTEXTRAKTION_OPAL:::yellow
-    TEXTEXTRAKTION_OPAL --> TEXTPREPROCESSING_OPAL(Textbereinigung)
-    GITHUB_DOWNLOAD(Github Download)
-    GITHUB_DOWNLOAD:::green --> TEXTEXTRAKTION_LIA(Textextraktion)
-    TEXTEXTRAKTION_LIA:::yellow
-    TEXTEXTRAKTION_LIA --> TEXTPREPROCESSING_LIA(Textbereinigung)
-    TEXTPREPROCESSING_LIA:::yellow
-    METADATENEXTRAKTION(Metadatenextraktion \n Inhalt)
-    METADATENEXTRAKTION:::yellow
+    FILE_DOWNLOAD:::green --> OPALFILES[(X Dateien)]
+    GITHUB_DOWNLOAD(Datei Download)
+    GITHUB_DOWNLOAD:::green --> LIAFILES[(Text Dateien)]
+    subgraph Extraktion
+    METADATENEXTRAKTION(Metadaten)
+    METADATENEXTRAKTION:::green
+    INHALTSEXTRAKTION(Inhalt)
+    INHALTSEXTRAKTION:::green
+      end
+      OPALFILES[(X Dateien)] --> Extraktion
+      LIAFILES[(Text Dateien)] --> Extraktion
     end
 
-    subgraph Textanalyse
-    KEYWORDEXTRAKTION(Keywordextraktion) --> KLASSIFIKATION(Klassifikation)
-    KLASSIFIKATION --> LLM(LLM)
-    LLM:::yellow
-    KLASSIFIKATION --> ?
-     end
+    subgraph LLM_Analyse
+    KEYWORDEXTRAKTION(Keywordextraktion) 
+    KLASSIFIKATION(Klassifikation)
+    AEHNLICHKEITSANALYSE(Ähnlichkeitsbewertung)
+    end
 
-    OPAL_FILES -->  FILE_DOWNLOAD
+
     FEATURE_EXTRACTION_LIA -->  GITHUB_DOWNLOAD
-    TEXTPREPROCESSING_OPAL --> KEYWORDEXTRAKTION
-    TEXTPREPROCESSING_LIA --> KEYWORDEXTRAKTION
+    OPAL_FILES --> FILE_DOWNLOAD
+    Extraktion --> LLM_Analyse
 
-    class Materialidentifikation,Materialbereitstellung,Textanalyse gray
+    class Materialidentifikation,Materialbereitstellung,LLM_Analyse,Extraktion gray
 ```
