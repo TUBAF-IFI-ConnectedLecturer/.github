@@ -1,4 +1,8 @@
-# Connected Lectures
+# Connected Lectures Project
+
+Gemeinsames Vorhaben des Instituts für Informatik und der Universitätsbibliothek der TU Bergakadememie
+
+------------------------------
 
 ## Motivation 
 
