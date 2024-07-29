@@ -18,54 +18,12 @@ Das Vorhaben wird durch den [AK E-Learning](https://bildungsportal.sachsen.de/po
 
 ## Realisierung 
 
-Das Projekt gliedert sich in 3 Subbereiche - [Materialidentifikation](https://github.com/TUBAF-IFI-ConnectedLecturer/Materialidentifikation), Materialbereitstellung, Textanalyse und Clustering. Dabei werden zwei Felder von OER Aktivitäten - Lehrmaterialien aus dem OPAL LMS und der Beschreibungssprache LiaScript - untersucht.
+Das Projekt gliedert sich in 3 Subbereiche 
 
-```mermaid
-flowchart TD
+- [Materialidentifikation und Bereitstellung](https://github.com/TUBAF-IFI-ConnectedLecturer/Materialidentifikation)  
+- Metadatenextraktion und Evaluation
+- Ähnlichkeitsanalyse und Clustering
 
-    classDef green fill:#5bd21c
-    classDef yellow fill:#ffd966
-    classDef gray fill:#bcbcbc
+als komponierbare Pipeline umgesetzt. Die Analyse der Teilergebnisse erfolgt mit [Jupyter-Notebooks](https://github.com/TUBAF-IFI-ConnectedLecturer/Data_analysis).
 
-    subgraph Materialidentifikation
-    OPAL[(OPAL)] --> OPAL_QUERY(OPAL Query)
-    OPAL_QUERY:::green
-    OPAL_QUERY --> OPAL_REPOS[(OPAL OER\nKurs\nVerzeichnis)]
-    OPAL_QUERY --> OPAL_FILES[(Einzel\nDateien\nVerzeichnis)]
-    LIA_IDENT(Liascript Identifikation)
-    GITHUB[(Github)] --> |Github API| LIA_IDENT:::green
-    LIA_IDENT --> |Dateisuche| LIA_FILES[(Lia\nDateien)]
-    LIA_REPOS --> LIA_FILES
-    LIA_IDENT --> |Reposuche| LIA_REPOS[(Lia\nRepos)]
-    LIA_FILES --> FEATURE_EXTRACTION_LIA(Metadatenextraktion Dokument)
-    FEATURE_EXTRACTION_LIA:::green
-    end
-
-    subgraph Materialbereitstellung
-    FILE_DOWNLOAD(Datei Download)
-    FILE_DOWNLOAD:::green --> OPALFILES[(X Dateien)]
-    GITHUB_DOWNLOAD(Datei Download)
-    GITHUB_DOWNLOAD:::green --> LIAFILES[(Text Dateien)]
-    subgraph Extraktion
-    METADATENEXTRAKTION(Metadaten)
-    METADATENEXTRAKTION:::green
-    INHALTSEXTRAKTION(Inhalt)
-    INHALTSEXTRAKTION:::green
-      end
-      OPALFILES[(X Dateien)] --> Extraktion
-      LIAFILES[(Text Dateien)] --> Extraktion
-    end
-
-    subgraph LLM_Analyse
-    KEYWORDEXTRAKTION(Keywordextraktion) 
-    KLASSIFIKATION(Klassifikation)
-    AEHNLICHKEITSANALYSE(Ähnlichkeitsbewertung)
-    end
-
-
-    FEATURE_EXTRACTION_LIA -->  GITHUB_DOWNLOAD
-    OPAL_FILES --> FILE_DOWNLOAD
-    Extraktion --> LLM_Analyse
-
-    class Materialidentifikation,Materialbereitstellung,LLM_Analyse,Extraktion gray
-```
+Dabei werden zwei Felder von OER Aktivitäten - Lehrmaterialien aus dem OPAL LMS und der Beschreibungssprache LiaScript - untersucht.
