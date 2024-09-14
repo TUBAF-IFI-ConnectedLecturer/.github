@@ -1,6 +1,6 @@
 # Connected Lectures Project
 
-Gemeinsames Vorhaben des Instituts für Informatik und der Universitätsbibliothek der TU Bergakadememie
+Gemeinsames Vorhaben des Instituts für Informatik und der Universitätsbibliothek der [TU Bergakadememie](https://tu-freiberg.de/)
 
 ------------------------------
 
