@@ -18,6 +18,8 @@ Beide Kernaspekte des Projekts – die Inhaltserschließung und das Empfehlungss
 
 Das Vorhaben wird durch den [AK E-Learning](https://bildungsportal.sachsen.de/portal/parentpage/institutionen/arbeitskreis-e-learning-der-lrk-sachsen/) Sachsen gefördert.
 
+------------------------------
+
 ## Realisierung 
 
 Das Projekt gliedert sich in 3 Subbereiche 
