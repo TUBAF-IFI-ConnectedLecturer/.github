@@ -16,7 +16,7 @@ Zur automatischen Verschlagwortung soll maschinelles Lernen genutzt werden, um e
 
 Beide Kernaspekte des Projekts – die Inhaltserschließung und das Empfehlungssystem – werden in einer Studie mit den beteiligten Lehrenden evaluiert. Die Umsetzung erfolgt in enger Zusammenarbeit zwischen dem Institut für Informatik und der Universitätsbibliothek der Bergakademie.
 
-Das Vorhaben wird durch den [AK E-Learning](https://bildungsportal.sachsen.de/portal/parentpage/institutionen/arbeitskreis-e-learning-der-lrk-sachsen/) Sachsen gefördert.
+Das Vorhaben wird durch den [AK E-Learning](https://bildungsportal.sachsen.de/portal/parentpage/institutionen/arbeitskreis-e-learning-der-lrk-sachsen/) Sachsen unter den Hochschulprojekten im Handlungsfeld III „Zugang und Offenheit von Bildungsressourcen sowie Chancengleichheit in der Bildung“ gefördert.
 
 ------------------------------
 
