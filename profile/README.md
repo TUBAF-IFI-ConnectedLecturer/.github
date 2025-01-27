@@ -24,10 +24,10 @@ Das Vorhaben wird durch den [AK E-Learning](https://bildungsportal.sachsen.de/po
 
 Das Projekt gliedert sich in 3 Subbereiche 
 
-- [Materialidentifikation und Bereitstellung](https://github.com/TUBAF-IFI-ConnectedLecturer/Materialidentifikation)  
+- Materialidentifikation und Bereitstellung
 - Metadatenextraktion und Evaluation
 - Ähnlichkeitsanalyse und Clustering
 
-als komponierbare Pipeline umgesetzt. Die Analyse der Teilergebnisse erfolgt mit [Jupyter-Notebooks](https://github.com/TUBAF-IFI-ConnectedLecturer/Data_analysis).
+als komponierbare Pipeline umgesetzt ([Link](https://github.com/TUBAF-IFI-ConnectedLecturer/Data_aggregation)). Die Analyse der Teilergebnisse erfolgt mit [Jupyter-Notebooks](https://github.com/TUBAF-IFI-ConnectedLecturer/Data_analysis).
 
 Dabei werden zwei Felder von OER Aktivitäten - Lehrmaterialien aus dem OPAL LMS und der Beschreibungssprache LiaScript - untersucht.
